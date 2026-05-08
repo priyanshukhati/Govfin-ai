@@ -1,0 +1,534 @@
+[
+  {
+    "id": 1,
+    "name": "PM Svanidhi",
+    "category_type": "Financial Aid",
+    "description": "Collateral-free loan up to ₹50,000",
+    "benefits": "Working capital loan with subsidy",
+    "documents": ["Aadhar Card", "Vendor ID"],
+    "apply_link": "https://example.com/svanidhi",
+    "eligibility": {
+      "min_age": 18,
+      "max_age": 60,
+      "max_income": 300000,
+      "occupation": ["self_employed", "business"],
+      "state": ["all"],
+      "category": ["General", "OBC", "SC", "ST", "EWS"],
+      "gender": ["male", "female"],
+      "disability": ["yes", "no"]
+    }
+  },
+  {
+    "id": 2,
+    "name": "PM Kisan Samman Nidhi",
+    "category_type": "Agriculture",
+    "description": "Income support of ₹6000 per year",
+    "benefits": "Direct benefit transfer",
+    "documents": ["Aadhar Card", "Land Records"],
+    "apply_link": "https://example.com/pmkisan",
+    "eligibility": {
+      "min_age": 18,
+      "max_age": 70,
+      "max_income": 500000,
+      "occupation": ["farmer"],
+      "state": ["all"],
+      "category": ["all"],
+      "gender": ["male", "female"],
+      "disability": ["yes", "no"]
+    }
+  },
+  {
+    "id": 3,
+    "name": "Ayushman Bharat",
+    "category_type": "Healthcare",
+    "description": "Health insurance up to ₹5 lakh",
+    "benefits": "Free treatment",
+    "documents": ["Aadhar Card", "Ration Card"],
+    "apply_link": "https://example.com/ayushman",
+    "eligibility": {
+      "min_age": 0,
+      "max_age": 100,
+      "max_income": 250000,
+      "occupation": ["all"],
+      "state": ["all"],
+      "category": ["all"],
+      "gender": ["male", "female"],
+      "disability": ["yes", "no"]
+    }
+  },
+  {
+    "id": 4,
+    "name": "MUDRA Loan",
+    "category_type": "Business",
+    "description": "Loans up to ₹10 lakh",
+    "benefits": "Support for small businesses",
+    "documents": ["Aadhar Card", "Business Proof"],
+    "apply_link": "https://example.com/mudra",
+    "eligibility": {
+      "min_age": 18,
+      "max_age": 65,
+      "max_income": 1000000,
+      "occupation": ["business", "self_employed"],
+      "state": ["all"],
+      "category": ["all"],
+      "gender": ["male", "female"],
+      "disability": ["yes", "no"]
+    }
+  },
+  {
+    "id": 5,
+    "name": "National Scholarship Scheme",
+    "category_type": "Financial Aid",
+    "description": "Scholarships for students",
+    "benefits": "Financial aid for education",
+    "documents": ["Aadhar Card", "Income Certificate", "Student ID"],
+    "apply_link": "https://example.com/scholarship",
+    "eligibility": {
+      "min_age": 16,
+      "max_age": 30,
+      "max_income": 200000,
+      "occupation": ["student"],
+      "state": ["all"],
+      "category": ["SC", "ST", "OBC", "EWS"],
+      "gender": ["male", "female"],
+      "disability": ["yes", "no"]
+    }
+  },
+  {
+    "id": 6,
+    "name": "Atal Pension Yojana",
+    "category_type": "Savings",
+    "description": "Pension scheme for unorganized sector",
+    "benefits": "Guaranteed pension",
+    "documents": ["Aadhar Card", "Bank Account Details"],
+    "apply_link": "https://example.com/atal",
+    "eligibility": {
+      "min_age": 18,
+      "max_age": 40,
+      "max_income": 800000,
+      "occupation": ["self_employed", "unemployed"],
+      "state": ["all"],
+      "category": ["all"],
+      "gender": ["male", "female"],
+      "disability": ["yes", "no"]
+    }
+  },
+{
+  "id": 7,
+  "name": "Stand-Up India Scheme",
+  "category_type": "Business",
+  "description": "Bank loans for SC/ST and women entrepreneurs",
+  "benefits": "Loan from ₹10 lakh to ₹1 crore",
+  "documents": ["Aadhar Card", "Caste Certificate", "Business Plan"],
+  "apply_link": "https://example.com/standup",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 65,
+    "max_income": 1000000,
+    "occupation": ["business", "self_employed"],
+    "state": ["all"],
+    "category": ["SC", "ST"],
+    "gender": ["female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 8,
+  "name": "Pradhan Mantri Awas Yojana",
+  "category_type": "Housing",
+  "description": "Affordable housing scheme",
+  "benefits": "Interest subsidy on home loans",
+  "documents": ["Aadhar Card", "Income Certificate"],
+  "apply_link": "https://example.com/awas",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 70,
+    "max_income": 600000,
+    "occupation": ["salaried", "self_employed"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 9,
+  "name": "National Social Assistance Programme",
+  "category_type": "Financial Aid",
+  "description": "Pension support for elderly",
+  "benefits": "Monthly pension",
+  "documents": ["Aadhar Card", "Age Proof"],
+  "apply_link": "https://example.com/nsap",
+  "eligibility": {
+    "min_age": 60,
+    "max_age": 100,
+    "max_income": 200000,
+    "occupation": ["retired", "unemployed"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 10,
+  "name": "PM Employment Generation Programme",
+  "category_type": "Business",
+  "description": "Support for new business ventures",
+  "benefits": "Subsidy on loans",
+  "documents": ["Aadhar Card", "Project Report"],
+  "apply_link": "https://example.com/pmegp",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 50,
+    "max_income": 800000,
+    "occupation": ["unemployed", "self_employed"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 11,
+  "name": "Skill India Mission",
+  "category_type": "Financial Aid",
+  "description": "Skill development training programs",
+  "benefits": "Free training and certification",
+  "documents": ["Aadhar Card"],
+  "apply_link": "https://example.com/skillmission",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 35,
+    "max_income": 500000,
+    "occupation": ["student", "unemployed"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 12,
+  "name": "National Disability Pension Scheme",
+  "category_type": "Financial Aid",
+  "description": "Financial assistance for disabled individuals",
+  "benefits": "Monthly pension support",
+  "documents": ["Aadhar Card", "Disability Certificate"],
+  "apply_link": "https://example.com/disability",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 100,
+    "max_income": 300000,
+    "occupation": ["all"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes"]
+  }
+},
+{
+  "id": 13,
+  "name": "PM Ujjwala Yojana",
+  "category_type": "Financial Aid",
+  "description": "Free LPG connections for women",
+  "benefits": "Free gas connection",
+  "documents": ["Aadhar Card", "BPL Certificate"],
+  "apply_link": "https://example.com/ujjwala",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 70,
+    "max_income": 200000,
+    "occupation": ["all"],
+    "state": ["all"],
+    "category": ["SC", "ST", "OBC", "EWS"],
+    "gender": ["female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 14,
+  "name": "Senior Citizen Savings Scheme",
+  "category_type": "Savings",
+  "description": "Savings scheme for senior citizens",
+  "benefits": "High interest savings",
+  "documents": ["Aadhar Card", "Age Proof"],
+  "apply_link": "https://example.com/scss",
+  "eligibility": {
+    "min_age": 60,
+    "max_age": 100,
+    "max_income": 1000000,
+    "occupation": ["retired"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 15,
+  "name": "PM Kaushal Vikas Yojana",
+  "category_type": "Financial Aid",
+  "description": "Skill certification scheme",
+  "benefits": "Training + placement support",
+  "documents": ["Aadhar Card"],
+  "apply_link": "https://example.com/pmkvy",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 35,
+    "max_income": 400000,
+    "occupation": ["student", "unemployed"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 16,
+  "name": "Deen Dayal Upadhyaya Grameen Kaushalya Yojana",
+  "category_type": "Business",
+  "description": "Rural employment training program",
+  "benefits": "Job placement assistance",
+  "documents": ["Aadhar Card", "Income Certificate"],
+  "apply_link": "https://example.com/ddugky",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 35,
+    "max_income": 300000,
+    "occupation": ["unemployed"],
+    "state": ["all"],
+    "category": ["SC", "ST", "OBC"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 17,
+  "name": "Central Sector Scholarship",
+  "category_type": "Financial Aid",
+  "description": "Scholarship for college students",
+  "benefits": "Financial support for higher education",
+  "documents": ["Aadhar Card", "Income Certificate", "Student ID"],
+  "apply_link": "https://example.com/scholarship",
+  "eligibility": {
+    "min_age": 17,
+    "max_age": 30,
+    "max_income": 300000,
+    "occupation": ["student"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 18,
+  "name": "AICTE Pragati Scholarship",
+  "category_type": "Financial Aid",
+  "description": "Scholarship for female students",
+  "benefits": "Financial assistance for female education",
+  "documents": ["Aadhar Card", "Income Certificate", "College Admission Proof"],
+  "apply_link": "https://example.com/pragati",
+  "eligibility": {
+    "min_age": 17,
+    "max_age": 30,
+    "max_income": 800000,
+    "occupation": ["student"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 19,
+  "name": "National Career Service",
+  "category_type": "Business",
+  "description": "Job assistance and career guidance",
+  "benefits": "Job matching and career support",
+  "documents": ["Aadhar Card", "Resume"],
+  "apply_link": "https://example.com/ncs",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 40,
+    "max_income": 400000,
+    "occupation": ["unemployed"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 20,
+  "name": "Skill India Training Program",
+  "category_type": "Financial Aid",
+  "description": "Free skill development courses",
+  "benefits": "Skill training with certification",
+  "documents": ["Aadhar Card"],
+  "apply_link": "https://example.com/skillindia",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 35,
+    "max_income": 500000,
+    "occupation": ["student", "unemployed"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 21,
+  "name": "Pradhan Mantri Fasal Bima Yojana",
+  "category_type": "Agriculture",
+  "description": "Crop insurance for farmers",
+  "benefits": "Insurance against crop loss",
+  "documents": ["Aadhar Card", "Land Documents"],
+  "apply_link": "https://example.com/fasalbima",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 65,
+    "max_income": 600000,
+    "occupation": ["farmer"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 22,
+  "name": "Kisan Credit Card Scheme",
+  "category_type": "Agriculture",
+  "description": "Credit support for farmers",
+  "benefits": "Easy credit access for farming needs",
+  "documents": ["Aadhar Card", "Land Ownership Proof"],
+  "apply_link": "https://example.com/kcc",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 65,
+    "max_income": 800000,
+    "occupation": ["farmer"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 23,
+  "name": "EPF Scheme",
+  "category_type": "Savings",
+  "description": "Retirement savings for salaried employees",
+  "benefits": "Provident fund with interest",
+  "documents": ["Aadhar Card", "Salary Slip"],
+  "apply_link": "https://example.com/epf",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 60,
+    "max_income": 1500000,
+    "occupation": ["salaried", "government_employee"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 24,
+  "name": "Gratuity Benefit Scheme",
+  "category_type": "Savings",
+  "description": "Lump sum retirement benefit",
+  "benefits": "One-time retirement payout",
+  "documents": ["Aadhar Card", "Employment Proof"],
+  "apply_link": "https://example.com/gratuity",
+  "eligibility": {
+    "min_age": 40,
+    "max_age": 60,
+    "max_income": 2000000,
+    "occupation": ["salaried", "government_employee"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 25,
+  "name": "Indira Gandhi National Old Age Pension",
+  "category_type": "Financial Aid",
+  "description": "Monthly pension for senior citizens",
+  "benefits": "Regular financial support",
+  "documents": ["Aadhar Card", "Age Proof"],
+  "apply_link": "https://example.com/pension",
+  "eligibility": {
+    "min_age": 60,
+    "max_age": 100,
+    "max_income": 200000,
+    "occupation": ["retired"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 26,
+  "name": "Widow Pension Scheme",
+  "category_type": "Financial Aid",
+  "description": "Financial support for widows",
+  "benefits": "Monthly pension for widows",
+  "documents": ["Aadhar Card", "Death Certificate"],
+  "apply_link": "https://example.com/widow",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 60,
+    "max_income": 200000,
+    "occupation": ["unemployed"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["female"],
+    "disability": ["yes", "no"]
+  }
+},
+{
+  "id": 27,
+  "name": "Accessible India Campaign",
+  "category_type": "Financial Aid",
+  "description": "Support and accessibility for disabled individuals",
+  "benefits": "Accessibility improvements and support",
+  "documents": ["Aadhar Card", "Disability Certificate"],
+  "apply_link": "https://example.com/accessible",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 100,
+    "max_income": 500000,
+    "occupation": ["all"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["male", "female"],
+    "disability": ["yes"]
+  }
+},
+{
+  "id": 28,
+  "name": "Mahila Samriddhi Yojana",
+  "category_type": "Financial Aid",
+  "description": "Financial support for women entrepreneurs",
+  "benefits": "Loan and financial support for women",
+  "documents": ["Aadhar Card", "Business Proof"],
+  "apply_link": "https://example.com/mahila",
+  "eligibility": {
+    "min_age": 18,
+    "max_age": 60,
+    "max_income": 500000,
+    "occupation": ["self_employed", "business"],
+    "state": ["all"],
+    "category": ["all"],
+    "gender": ["female"],
+    "disability": ["yes", "no"]
+  }
+}
+]
