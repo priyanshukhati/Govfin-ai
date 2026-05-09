@@ -60,6 +60,9 @@ export function SchemeCard({
         "recently_viewed_schemes",
         JSON.stringify(viewedSchemes)
       )
+      window.dispatchEvent(
+        new Event("govfin-data-updated")
+      )
   
     } catch (error) {
   

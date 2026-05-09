@@ -111,17 +111,26 @@ export function useRecommendationSummary() {
     loadSummary()
 
     // LIVE SYNC
+    // window.addEventListener(
+    //   "focus",
+    //   loadSummary
+    // )
     window.addEventListener(
-      "focus",
+      "govfin-data-updated",
       loadSummary
     )
 
-    return () => {
-      window.removeEventListener(
-        "focus",
-        loadSummary
-      )
-    }
+    // return () => {
+    //   window.removeEventListener(
+    //     "focus",
+    //     loadSummary
+    //   )
+    // }
+
+    window.removeEventListener(
+      "govfin-data-updated",
+      loadSummary
+    )
 
   }, [])
 

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { useParams } from "next/navigation"
+import { getSchemeById } from "@/services/api"
 
 type Scheme = {
   id: number
@@ -18,9 +19,18 @@ export default function SchemeDetailsPage() {
   const [scheme, setScheme] = useState<Scheme | null>(null)
 
   useEffect(() => {
-    fetch(`http://localhost:8000/scheme/${id}`)
-      .then((res) => res.json())
-      .then((data) => setScheme(data))
+    async function fetchScheme() {
+      try {
+        const data = await getSchemeById(id as string)
+        setScheme(data)
+      } catch (error) {
+        console.error("Failed to fetch scheme:", error)
+      }
+    }
+  
+    if (id) {
+      fetchScheme()
+    }
   }, [id])
 
   if (!scheme) return <p>Loading...</p>

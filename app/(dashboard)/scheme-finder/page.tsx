@@ -158,6 +158,9 @@ const [profileRecommended, setProfileRecommended] = useState<Scheme[]>([])
 
 const [recommendationMode, setRecommendationMode] = useState("profile")
 
+const [isHydrated, setIsHydrated] =
+  useState(false)
+
 useEffect(() => {
   const isFirstLoad = sessionStorage.getItem("govfin_loaded")
 
@@ -174,6 +177,8 @@ useEffect(() => {
   } else {
     setRecommendationMode("profile")
   }
+
+  setIsHydrated(true)
 
 }, [])
 
@@ -267,7 +272,11 @@ useEffect(() => {
 }, [])
 
 useEffect(() => {
-  if (recommendationMode === "manual") return
+  // if (recommendationMode === "manual") return
+    if (!isHydrated) return
+
+    if (recommendationMode === "manual") return
+
   const fetchProfileSchemes = async () => {
     try {
       const savedProfile = localStorage.getItem("govfin_profile")
@@ -317,7 +326,7 @@ useEffect(() => {
   }
 
   fetchProfileSchemes()
-}, [recommendationMode])
+}, [recommendationMode, isHydrated])
 
 const handleFindSchemes = async () => {
   try {

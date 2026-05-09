@@ -1,4 +1,9 @@
-const BASE_URL = "http://localhost:8000"
+// const BASE_URL = "http://localhost:8000"
+
+const BASE_URL =
+  process.env.NEXT_PUBLIC_API_URL
+
+console.log("API URL:", BASE_URL)  
 
 // 🔹 Common fetch wrapper
 async function safeFetch(url: string, options?: RequestInit) {
@@ -39,4 +44,9 @@ export async function filterSchemes(category: string) {
   return safeFetch(
     `${BASE_URL}/filter?category=${category.toLowerCase()}`
   )
+}
+
+// 🔹 Get Single Scheme
+export async function getSchemeById(id: string) {
+  return safeFetch(`${BASE_URL}/scheme/${id}`)
 }
