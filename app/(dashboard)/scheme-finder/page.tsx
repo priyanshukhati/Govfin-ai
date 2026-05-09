@@ -161,19 +161,35 @@ const [recommendationMode, setRecommendationMode] = useState("profile")
 const [isHydrated, setIsHydrated] =
   useState(false)
 
+// useEffect(() => {
+//   const isFirstLoad = sessionStorage.getItem("govfin_loaded")
+
+//   if (!isFirstLoad) {
+//     clearGovfinState()
+
+//     sessionStorage.setItem("govfin_loaded", "true")
+//   }
+
+//   const saved = getGovfinState()
+
+//   if (saved?.recommendation) {
+//     setRecommendationMode(saved.recommendation.mode || "manual")
+//   } else {
+//     setRecommendationMode("profile")
+//   }
+
+//   setIsHydrated(true)
+
+// }, [])
+
 useEffect(() => {
-  const isFirstLoad = sessionStorage.getItem("govfin_loaded")
-
-  if (!isFirstLoad) {
-    clearGovfinState()
-
-    sessionStorage.setItem("govfin_loaded", "true")
-  }
 
   const saved = getGovfinState()
 
   if (saved?.recommendation) {
-    setRecommendationMode(saved.recommendation.mode || "manual")
+    setRecommendationMode(
+      saved.recommendation.mode || "manual"
+    )
   } else {
     setRecommendationMode("profile")
   }
