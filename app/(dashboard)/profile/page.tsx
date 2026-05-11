@@ -93,12 +93,12 @@ export default function ProfilePage() {
   return (
     <>
       <Navbar title="Profile" />
-      <main className="flex-1 overflow-auto p-6">
-        <div className="mx-auto max-w-6xl space-y-6">
+      <main className="flex-1 overflow-auto p-4 sm:p-6">
+        <div className="mx-auto max-w-6xl space-y-5 sm:space-y-6">
           {/* Profile Header */}
           <Card className="rounded-2xl">
             <CardContent className="pt-6">
-              <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start">
+              <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-start">
                 <Avatar className="size-20">
                   <AvatarImage src="/placeholder-avatar.jpg" alt="User avatar" />
                   <AvatarFallback className="bg-blue-100 text-blue-700 text-2xl font-semibold">
@@ -111,7 +111,7 @@ export default function ProfilePage() {
                       .slice(0, 2) || "RK"}
                   </AvatarFallback>
                 </Avatar>
-                <div className="flex-1 text-center sm:text-left">
+                <div className="flex-1 space-y-3 text-center sm:text-left">
                   <div className="flex flex-col items-center gap-2 sm:flex-row">
                     <h2 className="text-xl font-semibold text-foreground">
                       {userProfile.name}
@@ -126,7 +126,7 @@ export default function ProfilePage() {
                   <p className="text-sm text-muted-foreground">
                     {userProfile.occupation}
                   </p>
-                  <div className="mt-4 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground sm:justify-start">
+                  <div className="mt-4 flex flex-col gap-3 text-sm text-muted-foreground sm:flex-row sm:flex-wrap sm:justify-start sm:gap-4">
                     <span className="flex items-center gap-1 break-all">
                       <Mail className="size-4" />
                       {userProfile.email}
@@ -139,7 +139,7 @@ export default function ProfilePage() {
                 </div>
                 <Button
                   variant="outline"
-                  className="gap-2"
+                  className="w-full gap-2 sm:w-auto"
                   onClick={() => setShowModal(true)}
                 >
                   <Edit className="size-4" />
@@ -157,7 +157,7 @@ export default function ProfilePage() {
                     Personal Information
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="grid gap-4 sm:grid-cols-2">
+                <CardContent className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="space-y-2">
                     <Label className="text-muted-foreground">Full Name</Label>
                     <div className="flex items-center gap-2">
@@ -228,7 +228,7 @@ export default function ProfilePage() {
                     Financial Information
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="grid gap-4 md:grid-cols-3">
+                <CardContent className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                   <div className="space-y-2">
                     <Label className="text-muted-foreground">Occupation</Label>
                     <Input value={userProfile.occupation} readOnly />
@@ -282,7 +282,7 @@ export default function ProfilePage() {
               </CardTitle>
             </CardHeader>
       
-            <CardContent className="grid gap-4 sm:grid-cols-2">
+            <CardContent className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <Input
                 placeholder="Full Name"
                 value={userProfile.name}
@@ -409,9 +409,10 @@ export default function ProfilePage() {
                 }
               />
       
-              <div className="sm:col-span-2 flex justify-end gap-2 pt-2">
+              <div className="flex flex-col gap-2 pt-2 sm:col-span-2 sm:flex-row sm:justify-end">
                 <Button
                   variant="outline"
+                  className="w-full sm:w-auto"
                   onClick={() => {
                     const savedProfile = localStorage.getItem("govfin_profile")
                 
@@ -437,7 +438,7 @@ export default function ProfilePage() {
                   Cancel
                 </Button>
       
-                <Button onClick={saveProfile}>
+                <Button onClick={saveProfile} className="w-full sm:w-auto">
                   Save Changes
                 </Button>
               </div>

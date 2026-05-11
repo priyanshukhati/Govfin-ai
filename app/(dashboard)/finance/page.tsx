@@ -247,11 +247,11 @@ export default function FinancePage() {
   return (
     <>
       <Navbar title="Finance" />
-      <main className="flex-1 overflow-auto p-6">
-        <div className="mx-auto max-w-6xl space-y-6">
+      <main className="flex-1 overflow-auto p-4 sm:p-6">
+        <div className="mx-auto max-w-6xl space-y-5 sm:space-y-6">
           {/* Quick Actions */}
-          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
-            <Button className="gap-2" 
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Button className="w-full gap-2 sm:w-auto" 
             onClick={() => {
               setTempIncome(income.toString())
               setShowIncomeModal(true)
@@ -261,7 +261,7 @@ export default function FinancePage() {
             </Button>
             <Button
             variant="outline"
-            className="gap-2"
+            className="w-full gap-2 sm:w-auto"
             onClick={() => {
               setTempExpense(expenses.toString())
               setShowExpenseModal(true)
@@ -272,7 +272,7 @@ export default function FinancePage() {
             </Button>
             <Button
               variant="outline"
-              className="gap-2"
+              className="w-full gap-2 sm:w-auto"
               onClick={() => {
                 const savedProfile = localStorage.getItem("govfin_profile")
               
@@ -312,7 +312,7 @@ export default function FinancePage() {
             <h2 className="mb-4 text-sm font-medium text-muted-foreground uppercase tracking-wide">
               Financial Overview
             </h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {kpiData.map((kpi) => (
                 <KpiCard key={kpi.title} {...kpi} />
               ))}
@@ -320,7 +320,7 @@ export default function FinancePage() {
           </section>
 
           {/* Main Content Grid */}
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-5 lg:grid-cols-3">
             {/* Left Column */}
             <div className="lg:col-span-2 space-y-6">
               {/* Recent Transactions */}
@@ -340,9 +340,9 @@ export default function FinancePage() {
                     {recentTransactions.map((transaction) => (
                       <div
                         key={transaction.name}
-                        className="flex items-center justify-between rounded-xl bg-muted/50 p-3"
+                        className="flex flex-col gap-3 rounded-xl bg-muted/50 p-4 sm:flex-row sm:items-center sm:justify-between"
                       >
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-start gap-3">
                           <div
                             className={`flex size-8 items-center justify-center rounded-lg ${
                               transaction.type === "income"
@@ -391,7 +391,7 @@ export default function FinancePage() {
                   <div className="space-y-4">
                     {expenseBreakdown.map((item) => (
                       <div key={item.category} className="space-y-2">
-                        <div className="flex items-center justify-between text-sm">
+                        <div className="flex items-center justify-between gap-3 text-sm">
                           <span className="font-medium text-foreground">
                             {item.category}
                           </span>
@@ -413,7 +413,7 @@ export default function FinancePage() {
             </div>
 
             {/* Right Column */}
-            <div className="space-y-4">
+            <div className="space-y-5">
               <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
                 Monthly Summary
               </h2>
@@ -427,8 +427,8 @@ export default function FinancePage() {
                   </CardTitle>
                 </CardHeader>
             
-                <CardContent className="space-y-3">
-                  <div className="text-3xl font-bold">
+                <CardContent className="space-y-4">
+                  <div className="text-2xl sm:text-3xl font-bold">
                     {financeHealth.score}/100
                   </div>
             
@@ -480,9 +480,10 @@ export default function FinancePage() {
       autoFocus
       />
       
-      <div className="flex justify-end gap-2">
+      <div className="flex flex-col gap-2 sm:flex-row sm:justify-end">
       <Button
       variant="outline"
+      className="w-full sm:w-auto"
       onClick={() => {
         setShowIncomeModal(false)
         setTempIncome("")
@@ -491,7 +492,9 @@ export default function FinancePage() {
       Cancel
       </Button>
       
-      <Button onClick={saveIncome}>
+      <Button onClick={saveIncome}
+      className="w-full sm:w-auto"
+      >
       Save
       </Button>
       </div>
@@ -527,9 +530,10 @@ export default function FinancePage() {
       autoFocus
       />
 
-      <div className="flex justify-end gap-2">
+      <div className="flex flex-col gap-2 sm:flex-row sm:justify-end">
       <Button
       variant="outline"
+      className="w-full sm:w-auto"
       onClick={() => {
         setShowExpenseModal(false)
         setTempExpense("")
@@ -538,7 +542,7 @@ export default function FinancePage() {
       Cancel
       </Button>
       
-      <Button onClick={saveExpense}>
+      <Button onClick={saveExpense} className="w-full sm:w-auto">
       Save
       </Button>
       </div>

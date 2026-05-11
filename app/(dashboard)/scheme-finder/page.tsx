@@ -571,11 +571,11 @@ function getRecommendationReasons(user: any, scheme: Scheme) {
   return (
     <>
       <Navbar title="Scheme Finder" />
-      <main className="flex-1 overflow-auto p-6">
-        <div className="mx-auto max-w-6xl space-y-6">
+      <main className="flex-1 overflow-auto p-4 sm:p-6">
+        <div className="mx-auto max-w-6xl space-y-5 sm:space-y-6">
           {/* Profile Status Banner - Subtle */}
           {!isProfileComplete && (
-            <div className="flex items-center justify-between gap-2 rounded-md border border-amber-100/80 bg-amber-50/40 px-3 py-1.5">
+            <div className="flex flex-col gap-3 rounded-md border border-amber-100/80 bg-amber-50/40 px-3 py-3 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-2">
                 <User className="size-3.5 text-amber-400" />
                 <p className="text-xs text-amber-600/90">
@@ -596,7 +596,7 @@ function getRecommendationReasons(user: any, scheme: Scheme) {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="flex flex-col gap-4 sm:flex-row">
+              <div className="flex flex-col gap-3 sm:flex-row">
                 <div className="relative flex-1">
                   <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                   <Input
@@ -608,22 +608,22 @@ function getRecommendationReasons(user: any, scheme: Scheme) {
                 </div>
 
                 {/* ✅ NEW SEARCH BUTTON */}
-                <Button onClick={handleSearch} disabled={isLoading} className="gap-2">
+                <Button onClick={handleSearch} disabled={isLoading} className="w-full gap-2 sm:w-auto">
                   <Search className="size-4" />
                   Search
                 </Button>
-                <Button variant="outline" className="gap-2">
+                <Button variant="outline" className="w-full gap-2 sm:w-auto">
                   <Filter className="size-4" />
                   Filters
                 </Button>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 overflow-x-auto pb-1">
                 {categories.map((category) => (
                   <Badge
                     key={category}
                     onClick={() => handleCategoryClick(category)}
                     variant={selectedCategory === category ? "default" : "secondary"}
-                    className="cursor-pointer hover:bg-blue-100"
+                    className="cursor-pointer whitespace-nowrap hover:bg-blue-100"
                   >
                     {category}
                   </Badge>
@@ -661,7 +661,7 @@ function getRecommendationReasons(user: any, scheme: Scheme) {
                     : ""}
                 </p>
               ) : (
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   {searchResults.map((scheme) => (
                     <SchemeCard
                       key={scheme.id}
@@ -681,7 +681,7 @@ function getRecommendationReasons(user: any, scheme: Scheme) {
 
           {/* Recommended Schemes Section */}
           <section className="space-y-4">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <h2 className="text-lg font-semibold text-foreground">
                   Recommended for You
@@ -693,12 +693,12 @@ function getRecommendationReasons(user: any, scheme: Scheme) {
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 ml-auto">  
+              <div className="flex flex-col gap-2 sm:ml-auto sm:flex-row sm:items-center">  
                 {hasSearched && (
                   <Button
                     variant="outline"
                     size="sm"
-                    className="text-red-600 border-red-200 hover:bg-red-50"
+                    className="w-full sm:w-auto text-red-600 border-red-200 hover:bg-red-50"
                     onClick={() => {
                       clearGovfinState()
 
@@ -732,7 +732,7 @@ function getRecommendationReasons(user: any, scheme: Scheme) {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="gap-2 border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800"
+                  className="w-full sm:w-auto gap-2 border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800"
                   onClick={() => setShowInputForm(!showInputForm)}
                 >
                   {showInputForm ? (
@@ -923,7 +923,7 @@ function getRecommendationReasons(user: any, scheme: Scheme) {
                   </p>
                 </div>
                 {/* Skeleton Cards */}
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   {[1, 2, 3].map((i) => (
                     <Card key={i} className="rounded-2xl">
                       <CardHeader className="pb-3">
@@ -999,7 +999,7 @@ function getRecommendationReasons(user: any, scheme: Scheme) {
                     <p className="mb-3 text-sm font-medium text-muted-foreground">
                       Other Recommended Schemes
                     </p>
-                    <div className="grid gap-4 md:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                         {recommendedSchemes
                           .filter((s) => s.id !== finalBestScheme?.id)
                           .map((scheme) => {
@@ -1038,7 +1038,7 @@ function getRecommendationReasons(user: any, scheme: Scheme) {
                 Browse the complete list of available government schemes
               </p>
             </div>
-            <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {allSchemes.map((scheme) => (
                 <SchemeCard
                   key={scheme.id}
