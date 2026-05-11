@@ -17,9 +17,9 @@ export function RecommendationSummary({
         </CardTitle>
       </CardHeader>
 
-      <CardContent className="space-y-3">
+      <CardContent className="space-y-4">
 
-        <div className="flex items-center justify-between rounded-xl bg-muted/50 p-3">
+        <div className="flex items-center justify-between gap-4 rounded-xl bg-muted/50 p-4">
           <div>
             <p className="text-sm text-muted-foreground">
               Eligible Schemes
@@ -33,7 +33,7 @@ export function RecommendationSummary({
           <Sparkles className="size-5 text-blue-600" />
         </div>
 
-        <div className="flex items-center justify-between rounded-xl bg-muted/50 p-3">
+        <div className="flex items-center justify-between gap-4 rounded-xl bg-muted/50 p-4">
           <div>
             <p className="text-sm text-muted-foreground">
               High Match
@@ -47,7 +47,7 @@ export function RecommendationSummary({
           <Sparkles className="size-5 text-green-600" />
         </div>
 
-        <div className="flex items-center justify-between rounded-xl bg-muted/50 p-3">
+        <div className="flex items-center justify-between gap-4 rounded-xl bg-muted/50 p-4">
           <div>
             <p className="text-sm text-muted-foreground">
               Recently Viewed

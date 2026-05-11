@@ -47,20 +47,20 @@ export function AiInsights({ insights, className }: AiInsightsProps) {
           AI Insights
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-3">
+      <CardContent className="space-y-4">
         {insights.map((insight, index) => {
           const style = insightStyles[insight.type]
           return (
             <div
               key={index}
               className={cn(
-                "flex items-start gap-3 rounded-xl border p-3",
+                "flex items-start gap-3 rounded-xl border p-4",
                 style.bg,
                 style.border
               )}
             >
               <span className={cn("mt-0.5", style.iconColor)}>{style.icon}</span>
-              <p className="text-sm text-foreground leading-relaxed">
+              <p className="text-sm leading-relaxed text-foreground break-words">
                 {insight.message}
               </p>
             </div>

@@ -76,14 +76,14 @@ export default function DashboardPage() {
   return (
     <>
       <Navbar title="Dashboard" />
-      <main className="flex-1 overflow-auto p-6">
-        <div className="mx-auto max-w-6xl space-y-6">
+      <main className="flex-1 overflow-auto p-4 sm:p-6">
+        <div className="mx-auto max-w-6xl space-y-5 sm:space-y-6">
           {/* KPI Cards */}
           <section>
             <h2 className="mb-4 text-sm font-medium text-muted-foreground uppercase tracking-wide">
               Key Metrics
             </h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {kpiData.map((kpi) => (
                 <KpiCard key={kpi.title} {...kpi} />
               ))}
@@ -91,7 +91,7 @@ export default function DashboardPage() {
           </section>
 
           {/* Main Content Grid */}
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-5 lg:grid-cols-3">
             {/* Left Column - Recommended Scheme */}
             <div className="lg:col-span-2 space-y-6">
               <section>
